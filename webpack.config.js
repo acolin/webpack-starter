@@ -6,7 +6,7 @@ var CleanPlugin = require('clean-webpack-plugin');
 var PATHS = {
   src: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'dist'),
-  template: path.join(__dirname, 'html-webpack-template/index.ejs')
+  template: 'node_modules/html-webpack-template/index.ejs',
 };
 
 module.exports = {
@@ -16,9 +16,9 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: PATHS.dist,
-    filename: 'dragform.min.js',
+    filename: 'main.min.js',
     libraryTarget: 'umd',
-    library: 'DragForm'
+    library: 'Main'
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -26,20 +26,15 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: PATHS.template,
-      title: 'dragform',
-      appMountId: 'dragform',
+      title: 'main',
+      appMountId: 'app',
       inject: false
     }),
     new CleanPlugin([PATHS.dist], {
       verbose: false
     })
   ],
-  module: {
-    loaders: [
-      {test: /\.coffee/, loader: "coffee"}
-    ]
-  },
   resolve: {
-    extensions: ["", ".web.coffee", "web.js", ".coffee", ".js"]
+    extensions: ["", "web.js", ".js"]
   }
 };

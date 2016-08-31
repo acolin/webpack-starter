@@ -1,24 +1,16 @@
 {
-  "name": "dragform",
+  "name": "main",
   "version": "1.0.0",
   "description": "",
   "files": [
     "dist"
   ],
-  "main": "dist/dragform.min.js",
+  "main": "dist/main.min.js",
   "dependencies": {
-    "jquery": "^1.8.2",
-    "jquery-ui": "^1.10.4",
-    "knockout": "^2.2.1",
-    "knockout-mapping": "^2.5.0",
-    "knockout-sortable": "^0.11.0",
-    "knockout.validation": "^2.0.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "clean-webpack-plugin": "^0.1.8",
-    "coffee-loader": "^0.7.2",
-    "coffee-script": "^1.10.0",
     "html-webpack-plugin": "^2.15.0",
     "html-webpack-template": "^4.0.0",
     "mocha": "^2.4.5",
@@ -26,20 +18,20 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register --recursive",
+    "test": "mocha --recursive",
     "build": "webpack",
     "start": "webpack-dev-server --content-base build",
     "prepublish": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acolin/dragform.git"
+    "url": "git+https://github.com/acolin/webpack-starter.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/acolin/dragform/issues"
+    "url": "https://github.com/acolin/webpack-starter/issues"
   },
-  "homepage": "https://github.com/acolin/dragform#readme"
+  "homepage": "https://github.com/webpack-starter/webpack-starter#readme"
 }
