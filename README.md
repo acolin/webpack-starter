@@ -1,7 +1,5 @@
 # Webpack Starter Skeleton
 
-A plugin for creating forms using dead simple Drag&Drop
-
 ### Usage
 
 ```
